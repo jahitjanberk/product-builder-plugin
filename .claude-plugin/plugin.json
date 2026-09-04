@@ -1,0 +1,11 @@
+{
+  "name": "product-builder",
+  "displayName": "Product Builder",
+  "version": "1.0.0",
+  "description": "End-to-end product build assistant: UI/UX design, product management, clean development practices, and continuous security hardening.",
+  "keywords": ["product-management", "frontend-design", "development", "security", "iam"],
+  "license": "MIT",
+  "author": {
+    "name": "Jahit Janberk"
+  }
+}
