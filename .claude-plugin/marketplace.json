@@ -1,0 +1,13 @@
+{
+  "name": "jahit-plugins",
+  "owner": {
+    "name": "Jahit Janberk"
+  },
+  "plugins": [
+    {
+      "name": "product-builder",
+      "source": ".",
+      "description": "End-to-end product build assistant: UI/UX design, product management, clean development practices, and continuous security hardening."
+    }
+  ]
+}

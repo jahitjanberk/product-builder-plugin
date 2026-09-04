@@ -63,3 +63,8 @@ Push the same `my-marketplace` structure to a repo, then anyone (including futur
 - `security-engineer` is written to be always-on: its description asks Claude to apply it any time code, infrastructure, or access decisions come up, not just when security is explicitly mentioned.
 - `mobile-web-design` is the design skill as already published — dropped in here as-is so it participates in the same plugin bundle.
 - Extend this by adding more skill folders under `skills/`, each with its own `SKILL.md`. No manifest changes are needed — new folders under `skills/` are auto-discovered.
+
+## Install via marketplace
+
+`/plugin marketplace add jahitjanberk/product-builder-plugin`
+`/plugin install product-builder@jahit-plugins`
