@@ -1,0 +1,2 @@
+# `claude plugin eval` writes run results and HTML reports here by default
+evals/results/

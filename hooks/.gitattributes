@@ -1,0 +1,2 @@
+# Hook scripts run under bash on every platform; CRLF line endings break them.
+*.sh text eol=lf

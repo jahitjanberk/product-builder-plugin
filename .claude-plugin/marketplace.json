@@ -1,5 +1,6 @@
 {
   "name": "jahit-plugins",
+  "description": "Plugins by Jahit Janberk for building products with Claude Code.",
   "owner": {
     "name": "Jahit Janberk"
   },
@@ -7,7 +8,8 @@
     {
       "name": "product-builder",
       "source": ".",
-      "description": "End-to-end product build assistant: UI/UX design, product management, clean development practices, and continuous security hardening."
+      "version": "2.0.0",
+      "description": "All-in-one product build assistant: an idea-to-launch orchestrator plus product management, UI/UX design, development, and security skills, a post-edit security scan hook, and a fresh-context security reviewer subagent."
     }
   ]
 }
