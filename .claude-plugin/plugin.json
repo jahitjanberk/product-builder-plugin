@@ -1,11 +1,25 @@
 {
   "name": "product-builder",
   "displayName": "Product Builder",
-  "version": "1.0.0",
-  "description": "End-to-end product build assistant: UI/UX design, product management, clean development practices, and continuous security hardening.",
-  "keywords": ["product-management", "frontend-design", "development", "security", "iam"],
-  "license": "MIT",
+  "version": "2.0.0",
+  "description": "All-in-one product build assistant: an idea-to-launch orchestrator plus product management, UI/UX design, development, and security skills, a post-edit security scan hook, and a fresh-context security reviewer subagent.",
   "author": {
-    "name": "Jahit Janberk"
-  }
+    "name": "Jahit Janberk",
+    "url": "https://github.com/jahitjanberk"
+  },
+  "homepage": "https://github.com/jahitjanberk/product-builder-plugin",
+  "repository": "https://github.com/jahitjanberk/product-builder-plugin",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "prd",
+    "ui-ux-design",
+    "accessibility",
+    "design-tokens",
+    "development",
+    "security",
+    "owasp",
+    "threat-modeling",
+    "llm-security"
+  ]
 }

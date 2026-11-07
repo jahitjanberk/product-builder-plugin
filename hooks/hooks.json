@@ -1,0 +1,17 @@
+{
+  "description": "product-builder security scan: checks every file Claude writes or edits for hardcoded secrets and risky security config, and asks Claude to fix or explain each finding.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/security-scan.sh\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
