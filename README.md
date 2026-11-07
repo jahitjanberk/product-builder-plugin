@@ -2,6 +2,13 @@
 
 A Claude Code plugin that takes a product from idea to launch: product management, UI/UX design, development, and security, connected into one process instead of four separate checklists.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/styles-overview-dark.png">
+  <img src="assets/screenshots/styles-overview.png" alt="The same landlord repair-requests screen in six visual styles: Modern SaaS Light, Soft Minimal Dashboard, Bold Flat Blocks, Swiss Technical, Ambient Gradient, and Moody Editorial">
+</picture>
+
+*One repair-requests screen in each of the six `ui-ux-design` styles, built from the tokens in [`skills/ui-ux-design/references/`](skills/ui-ux-design/references/). Each style also has a light and a dark version, in [`assets/screenshots/styles/`](assets/screenshots/styles/).*
+
 ## Install
 
 ```text
@@ -31,6 +38,10 @@ Restart Claude Code (or run `/reload-plugins`) after installing.
 /product-builder:build-product I want to build an app that helps landlords track repair requests
 ```
 
+![build-product picks the full track because the app stores tenant personal data, shows a phase status table, and asks its first questions, each with a suggested default](assets/screenshots/build-kickoff.png)
+
+*Screenshots in this README show real output from the plugin in a simplified terminal frame. Cuts are marked ⋯.*
+
 It works out which phases the request needs and writes artifacts into your project:
 
 | Phase | Artifact | Gate before moving on |
@@ -44,6 +55,17 @@ It works out which phases the request needs and writes artifacts into your proje
 
 Small projects (prototypes, no real user data) get a **lean track**: one `docs/build-plan.md` with a short section per phase. Anything handling real personal or financial data gets the full Secure phase regardless of size. You can skip any gate; the skip is recorded so it stays visible. Ask *"where are we?"* at any point for a status table.
 
+<details>
+<summary>Screenshots: a generated PRD, a skipped gate, and "where are we?"</summary>
+
+![Excerpt of the generated docs/product/prd.md: user stories with Given/When/Then acceptance criteria and a data-sensitivity table](assets/screenshots/artifact-prd.png)
+
+![Asked to skip the spec and threat model, build-product allows the skip, records it, and says a threat model or a written risk acceptance is still due before real tenants use the app](assets/screenshots/build-skip-gate.png)
+
+![In a new session, "where are we?" rebuilds the phase status table from the artifacts on disk](assets/screenshots/build-status.png)
+
+</details>
+
 **Use a single skill directly.** You don't need the orchestrator for one-off work. The skills load automatically from what you ask ("price this," "design this screen," "review this schema"), or you can call one by name, e.g. `/product-builder:ui-ux-design`.
 
 **Run a security review** of your current changes:
@@ -52,9 +74,13 @@ Small projects (prototypes, no real user data) get a **lean track**: one `docs/b
 @agent-product-builder:security-reviewer review my current branch before I merge
 ```
 
+![The security-reviewer subagent reports a SQL injection and a missing ownership check (IDOR) as Critical, with file, line, and fix for each](assets/screenshots/security-review.png)
+
 ## The security scan hook
 
 After Claude writes or edits a file, `hooks/scripts/security-scan.sh` scans it and passes any findings back to Claude so it fixes them right away.
+
+![After an edit that hardcodes a database password, the hook reports the rule and line number and a suggested High severity, without repeating the password](assets/screenshots/hook-security-scan.png)
 
 - **Every text file, docs included:**
   - private keys
