@@ -1,6 +1,30 @@
+<div align="center">
+
 # Product Builder
 
-A Claude Code plugin that takes a product from idea to launch: product management, UI/UX design, development, and security, connected into one process instead of four separate checklists.
+**A Claude Code plugin that takes a product from idea to launch.** Product management, UI/UX design, development, and security, connected into one process instead of four separate checklists.
+
+[![GitHub stars](https://img.shields.io/github/stars/jahitjanberk/product-builder-plugin?style=social)](https://github.com/jahitjanberk/product-builder-plugin/stargazers) [![license](https://img.shields.io/github/license/jahitjanberk/product-builder-plugin)](LICENSE) [![version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjahitjanberk%2Fproduct-builder-plugin%2Fmain%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&color=blue)](.claude-plugin/plugin.json) [![last commit](https://img.shields.io/github/last-commit/jahitjanberk/product-builder-plugin)](https://github.com/jahitjanberk/product-builder-plugin/commits/main) [![skills: 5](https://img.shields.io/static/v1?label=skills&message=5&color=8250DF)](skills/) [![design styles: 6](https://img.shields.io/static/v1?label=design%20styles&message=6&color=BF3989)](skills/ui-ux-design/references/) [![templates: 6](https://img.shields.io/static/v1?label=templates&message=6&color=0E7490)](#how-to-use-it)
+
+[![Claude Code: Install the plugin](https://img.shields.io/static/v1?label=Claude%20Code&message=Install%20the%20plugin&color=B4532F&style=for-the-badge&labelColor=555555&logo=claude&logoColor=white)](#install) [![build-product: orchestrator](https://img.shields.io/static/v1?label=build-product&message=orchestrator&color=1F6FEB&style=for-the-badge&labelColor=555555)](skills/build-product/SKILL.md)
+
+[![product-management: skill](https://img.shields.io/static/v1?label=product-management&message=skill&color=8250DF&style=for-the-badge&labelColor=555555)](skills/product-management/SKILL.md) [![ui-ux-design: skill](https://img.shields.io/static/v1?label=ui-ux-design&message=skill&color=BF3989&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/SKILL.md) [![developer: skill](https://img.shields.io/static/v1?label=developer&message=skill&color=1A7F37&style=for-the-badge&labelColor=555555)](skills/developer/SKILL.md)
+
+[![security-engineer: skill](https://img.shields.io/static/v1?label=security-engineer&message=skill&color=CF222E&style=for-the-badge&labelColor=555555)](skills/security-engineer/SKILL.md) [![security-reviewer: subagent](https://img.shields.io/static/v1?label=security-reviewer&message=subagent&color=BC4C00&style=for-the-badge&labelColor=555555)](agents/security-reviewer.md) [![security scan: hook](https://img.shields.io/static/v1?label=security%20scan&message=hook&color=9A6700&style=for-the-badge&labelColor=555555)](#the-security-scan-hook)
+
+[![Modern SaaS Light: default](https://img.shields.io/static/v1?label=Modern%20SaaS%20Light&message=default&color=4F46E5&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/references/modern-saas-light.md) [![Soft Minimal Dashboard: ops tools](https://img.shields.io/static/v1?label=Soft%20Minimal%20Dashboard&message=ops%20tools&color=2563EB&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/references/soft-minimal-dashboard.md) [![Bold Flat Blocks: bold brands](https://img.shields.io/static/v1?label=Bold%20Flat%20Blocks&message=bold%20brands&color=C6F24E&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/references/bold-flat-blocks.md)
+
+[![Swiss Technical: dev tools](https://img.shields.io/static/v1?label=Swiss%20Technical&message=dev%20tools&color=2E4BFF&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/references/swiss-technical.md) [![Ambient Gradient: AI & fintech](https://img.shields.io/static/v1?label=Ambient%20Gradient&message=AI%20%26%20fintech&color=DB2777&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/references/ambient-gradient.md) [![Moody Editorial: wellness](https://img.shields.io/static/v1?label=Moody%20Editorial&message=wellness&color=EBC08A&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/references/moody-editorial.md)
+
+[![Define: PRD](https://img.shields.io/static/v1?label=Define&message=PRD&color=0E7490&style=for-the-badge&labelColor=555555)](skills/product-management/templates/prd.md) [![Design: brief](https://img.shields.io/static/v1?label=Design&message=brief&color=0E7490&style=for-the-badge&labelColor=555555)](skills/ui-ux-design/templates/design-brief.md) [![Plan: tech spec](https://img.shields.io/static/v1?label=Plan&message=tech%20spec&color=0E7490&style=for-the-badge&labelColor=555555)](skills/developer/templates/tech-spec.md)
+
+[![Plan: ADR](https://img.shields.io/static/v1?label=Plan&message=ADR&color=0E7490&style=for-the-badge&labelColor=555555)](skills/developer/templates/adr.md) [![Secure: threat model](https://img.shields.io/static/v1?label=Secure&message=threat%20model&color=0E7490&style=for-the-badge&labelColor=555555)](skills/security-engineer/templates/threat-model.md) [![Launch: checklist](https://img.shields.io/static/v1?label=Launch&message=checklist&color=0E7490&style=for-the-badge&labelColor=555555)](skills/build-product/templates/launch-checklist.md)
+
+[![Download: everything (zip)](https://img.shields.io/static/v1?label=Download&message=everything%20%28zip%29&color=24292F&style=for-the-badge&labelColor=555555&logo=github&logoColor=white)](https://github.com/jahitjanberk/product-builder-plugin/archive/refs/heads/main.zip) [![Run locally: claude --plugin-dir](https://img.shields.io/static/v1?label=Run%20locally&message=claude%20--plugin-dir&color=1F883D&style=for-the-badge&labelColor=555555)](#developing-the-plugin) [![Evals: trigger tests](https://img.shields.io/static/v1?label=Evals&message=trigger%20tests&color=6E7781&style=for-the-badge&labelColor=555555)](evals/)
+
+[How to use it](#how-to-use-it) · [Security scan hook](#the-security-scan-hook) · [Developing](#developing-the-plugin) · [Upgrading from 1.x](#upgrading-from-1x) · [License](LICENSE)
+
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/screenshots/styles-overview-dark.png">
